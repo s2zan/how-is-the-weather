@@ -36,18 +36,12 @@ function getGeoCode(city) {
       `https://maps.googleapis.com/maps/api/geocode/json?address=${city}&key=${GOOGLE_KEY}`
     ).then(function(response) {
       response.json().then(function(data) {
-        /**
-         * - input으로 받은 data에서 우리가 필요한 정보만 찾아 resolve에 인풋으로 넣어주세요!
-         *
-         * * resolve에 넘겨주어야 하는 input 형식
-         * {
-         *   lat: 위도,
-         *   lng: 경도
-         * }
-         */
         console.log("우리가 받은 위치 데이터 ", data);
 
-        resolve(); // 여기에 저희가 원하는 형식의 값을 넣어주세요!
+        resolve({
+          "lat" : data.results[0].geometry.location.lat,
+          "lng" : data.results[0].geometry.location.lng
+        });
       });
     });
   });
