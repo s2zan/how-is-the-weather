@@ -80,11 +80,7 @@ function getWeatherData(lat, lng) {
  * }
  */
 function setWeatherInfo(cityName, weatherInfo) {
-  /**
-   * 우리가 받아온 온도는 Kelvin 형식으로 표시되어있습니다.
-   * 어떻게 Celsius 형식으로 변경할 수 있을까요?
-   */
-  temp.innerText = weatherInfo.temp; // 이곳에 넣어준 값이 온도로 표시됩니다!
+  temp.innerText = Math.round(weatherInfo.temp - 273.15);
 
   /**
    * data.js 파일에 있는 imgLinks 객체를 사용해 날씨에 맞는 이미지를 표시해보세요!
