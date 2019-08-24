@@ -82,11 +82,8 @@ function getWeatherData(lat, lng) {
 function setWeatherInfo(cityName, weatherInfo) {
   temp.innerText = Math.round(weatherInfo.temp - 273.15);
 
-  /**
-   * data.js 파일에 있는 imgLinks 객체를 사용해 날씨에 맞는 이미지를 표시해보세요!
-   */
-  const weatherLink = "sun.png";
-  image.src = `./img/${weatherLink}`; // 이곳에 이미지 파일의 경로를 입력해주면 이미지 파일이 표시됩니다.
+  const weatherLink = imgLinks[weatherInfo.weather];
+  image.src = `./img/${weatherLink}`;
 
   /**
    * 아래의 코드는 어떤 역할을 할까요?
