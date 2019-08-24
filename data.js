@@ -13,6 +13,14 @@
 const imgLinks = {
   Clear: "sun.png",
   Rain: "rain.png",
+  Drizzle: "rain.png",
   Snow: "snowing.png",
-  Clouds: "cloudy.png"
+  Clouds: "cloudy.png",
+  Haze: "haze.png",
+  Mist: "haze.png",
+  Fog: "haze.png",
+  Thunderstorm: "storm.png",
+  Smoke: "smoke.png",
+  Ash: "smoke.png",
+  Dust: "smoke.png"
 };
