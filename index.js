@@ -59,18 +59,12 @@ function getWeatherData(lat, lng) {
       `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&APPID=${WEATHER_KEY}`
     ).then(function(response) {
       response.json().then(function(data) {
-        /**
-         * - input으로 받은 data에서 우리가 필요한 정보만 찾아 resolve에 인풋으로 넣어주세요!
-         *
-         * * resolve에 넘겨주어야 하는 input 형식
-         * {
-         *    temp: 기온
-         *    weather: 날씨(데이터에서 weather -> main을 찾아 설정해주세요!)
-         * }
-         */
         console.log("우리가 받은 날씨 데이터 ", data);
 
-        resolve(); // 여기에 저희가 원하는 형식의 값을 넣어주세요!
+        resolve({
+          "temp" : data.main.temp,
+          "weather" : data.weather[0].main
+        });
       });
     });
   });
