@@ -6,6 +6,7 @@ const input = document.getElementById("searchText");
 const temp = document.getElementById("temp");
 const city = document.getElementById("city");
 const image = document.getElementById("image");
+const body = document.getElementsByTagName("body")[0];
 
 // 도시 이름을 입력하고, Enter키를 누루면 아래 함수가 실행됩니다.
 searchForm.addEventListener("submit", function(event) {
@@ -83,8 +84,9 @@ function setWeatherInfo(cityName, weatherInfo) {
   temp.innerText = Math.round(weatherInfo.temp - 273.15);
 
   const weatherLink = imgLinks[weatherInfo.weather];
+  const colorLink = colorLinks[weatherInfo.weather];
   image.src = `./img/${weatherLink}`;
-
+  body.style.background = `linear-gradient(to bottom, ${colorLink[0]}, ${colorLink[1]})`;
   /**
    * 아래의 코드는 어떤 역할을 할까요?
    */

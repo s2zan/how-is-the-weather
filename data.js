@@ -24,3 +24,17 @@ const imgLinks = {
   Ash: "smoke.png",
   Dust: "smoke.png"
 };
+const colorLinks = {
+  Clear: ["#64b3f4", "#c2e59c"],
+  Rain: ["#1f6298", "#8de0be"],
+  Drizzle: ["#64b3f4", "#c2e59c"],
+  Snow: ["#64b3f4", "#c2e59c"],
+  Clouds: ["#64b3f4", "#c2e59c"],
+  Haze: ["#7388b9", "#c2e59c"],
+  Mist: ["#7388b9", "#b4bfba"],
+  Fog: ["#7388b9", "#b4bfba"],
+  Thunderstorm: ["#475b8a", "#272928"],
+  Smoke: ["#568894", "#9a9a9a"],
+  Ash: ["#525252", "#c2e59c"],
+  Dust: ["#9e8e5a", "#8d9a86"],
+};
